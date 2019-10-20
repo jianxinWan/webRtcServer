@@ -1,0 +1,23 @@
+{
+  "name": "webrtcserver",
+  "version": "1.0.0",
+  "description": "基于webRtc的视频会议后台代码",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jianxinWan/webRtcServer.git"
+  },
+  "author": "jianxinWan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jianxinWan/webRtcServer/issues"
+  },
+  "homepage": "https://github.com/jianxinWan/webRtcServer#readme",
+  "dependencies": {
+    "@types/koa-router": "^7.0.42",
+    "koa-router": "^7.4.0"
+  }
+}
