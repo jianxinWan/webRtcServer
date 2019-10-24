@@ -14,7 +14,9 @@ const socketIO = require('socket.io');
 const apps = https.createServer(options);
 //监听端口
 const SSL_PORT = 8443;
-apps.listen(SSL_PORT);
+apps.listen(SSL_PORT, () => {
+  console.log('the api at https://localhost:8443')
+});
 
 //构建Sock.io服务器
 const io = socketIO.listen(apps);
@@ -88,8 +90,6 @@ io.sockets.on('connection', function (socket) {
       data.room = room;
       //发送房间内其他客户端
       io.sockets.in(room).emit('joined', data);
-
-
       //发送【created】消息至客户端 [id,room,peers]
       var data = {};
       //socket id
@@ -182,7 +182,9 @@ var express = require("express");
 var htmlApp = express();
 htmlApp.use(express.static("static"))
 var httpsServer = https.createServer(options, htmlApp);
-httpsServer.listen(8441);
+httpsServer.listen(8441, () => {
+  console.log('this pages at https://localhost:8441/index.html')
+});
 
 // //http 静态路由
 // htmlApp.use(express.static("htmlTest")).listen(8080);

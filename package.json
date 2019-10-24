@@ -18,6 +18,9 @@
   "homepage": "https://github.com/jianxinWan/webRtcServer#readme",
   "dependencies": {
     "@types/koa-router": "^7.0.42",
-    "koa-router": "^7.4.0"
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "koa-router": "^7.4.0",
+    "socket.io": "^2.3.0"
   }
 }
